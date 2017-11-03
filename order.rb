@@ -1,4 +1,4 @@
-class Orde
+class Order
   attr_accessor :book, :reader, :date
 
   def initialize(book, reader, date = Time.now)

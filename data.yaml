@@ -1,0 +1,79 @@
+--- !ruby/object:Library
+books:
+- &1 !ruby/object:Book
+  title: book1
+  author: &8 !ruby/object:Author
+    name: name1
+    biography: biography1
+- &3 !ruby/object:Book
+  title: book2
+  author: &9 !ruby/object:Author
+    name: name2
+    biography: biography2
+- &5 !ruby/object:Book
+  title: book3
+  author: &10 !ruby/object:Author
+    name: name3
+    biography: biography3
+- &6 !ruby/object:Book
+  title: book4
+  author: !ruby/object:Author
+    name: name4
+    biography: biography4
+orders:
+- !ruby/object:Order
+  book: *1
+  reader: &2 !ruby/object:Reader
+    name: Ivanov
+    email: Ivanov@i.ua
+    city: dnepr
+    street: reader1street
+    house: '3'
+  date: 2017-11-03 23:02:07.890190292 +02:00
+- !ruby/object:Order
+  book: *1
+  reader: *2
+  date: 2017-11-03 23:02:07.890192988 +02:00
+- !ruby/object:Order
+  book: *1
+  reader: *2
+  date: 2017-11-03 23:02:07.890194037 +02:00
+- !ruby/object:Order
+  book: *3
+  reader: &4 !ruby/object:Reader
+    name: Petrov
+    email: Petrov@i.ua
+    city: lviv
+    street: reader2street
+    house: '5'
+  date: 2017-11-03 23:02:07.890194845 +02:00
+- !ruby/object:Order
+  book: *3
+  reader: *4
+  date: 2017-11-03 23:02:07.890195619 +02:00
+- !ruby/object:Order
+  book: *5
+  reader: &7 !ruby/object:Reader
+    name: Sidorov
+    email: Sidorov@i.ua
+    city: kiev
+    street: reader3street
+    house: '12'
+  date: 2017-11-03 23:02:07.890196348 +02:00
+- !ruby/object:Order
+  book: *6
+  reader: *7
+  date: 2017-11-03 23:02:07.890197037 +02:00
+readers:
+- *2
+- *4
+- *7
+authors:
+- *8
+- *9
+- *10
+hash:
+  book1: 3
+  book2: 2
+  book3: 1
+  book4: 1

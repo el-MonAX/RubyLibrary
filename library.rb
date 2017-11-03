@@ -12,6 +12,10 @@ class Library
     #get_data file
   end
 
+  def to_s
+    'Welcome to our Library!'
+  end
+
   def add_book book
     @books << book
   end
